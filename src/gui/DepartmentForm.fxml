@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="129.0" prefWidth="467.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane prefHeight="129.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentFormController">
    <children>
       <GridPane layoutX="20.0" layoutY="14.0" prefHeight="101.0" prefWidth="401.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
         <columnConstraints>
@@ -28,17 +27,17 @@
          <children>
             <Label text="Id" GridPane.rowIndex="1" />
             <Label text="Name" GridPane.rowIndex="2" />
-            <TextField editable="false" prefHeight="37.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="txtId" editable="false" prefHeight="37.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </TextField>
-            <TextField prefHeight="11.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txtName" prefHeight="11.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Button mnemonicParsing="false" text="Save" />
-                  <Button mnemonicParsing="false" text="Cancel" />
+                  <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSaveAction" text="Save" />
+                  <Button fx:id="btCancel" mnemonicParsing="false" onAction="#onBtCancelAction" text="Cancel" />
                </children>
             </HBox>
          </children>
